@@ -16,19 +16,35 @@ const ContactSection = () => {
       [e.target.name]: e.target.value
     });
   };
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault();
-    toast({
-      title: "Nachricht gesendet!",
-      description: "Wir melden uns innerhalb von 24 Stunden bei Ihnen zurück.",
-      duration: 5000
-    });
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
+    try {
+      const response = await fetch('https://formspree.io/f/mqegkvyw', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      if (response.ok) {
+        toast({
+          title: "Nachricht gesendet!",
+          description: "Wir melden uns innerhalb von 24 Stunden bei Ihnen zurück.",
+          duration: 5000
+        });
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        toast({
+          title: "Fehler beim Senden",
+          description: "Bitte versuchen Sie es erneut oder rufen Sie uns an.",
+          duration: 5000
+        });
+      }
+    } catch {
+      toast({
+        title: "Fehler beim Senden",
+        description: "Bitte versuchen Sie es erneut oder rufen Sie uns an.",
+        duration: 5000
+      });
+    }
   };
   const backgroundImageUrl = "https://horizons-cdn.hostinger.com/506afa5e-9879-44fd-ad9f-fe83a7b3f66e/da3630085c2c006596e7b30c4982d227.jpg";
 
