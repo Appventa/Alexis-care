@@ -10,16 +10,7 @@ const AboutSection = () => {
       try {
         const data = JSON.parse(event.data);
         if (data.event === 'onStateChange' && data.info === 0) {
-          const iframe = iframeRef.current;
-          if (!iframe) return;
-          iframe.contentWindow.postMessage(
-            JSON.stringify({ event: 'command', func: 'seekTo', args: [0, true] }),
-            'https://www.youtube.com'
-          );
-          iframe.contentWindow.postMessage(
-            JSON.stringify({ event: 'command', func: 'pauseVideo', args: [] }),
-            'https://www.youtube.com'
-          );
+          window.location.reload();
         }
       } catch {}
     };
