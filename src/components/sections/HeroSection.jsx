@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 const HeroSection = ({ heroContent }) => {
   return <section className="relative h-[600px] text-white">
       <div className="absolute inset-0">
-        <img className="w-full h-full object-cover" alt="Eine fürsorgliche Pflegekraft lächelt eine ältere Patientin in einem hellen Raum an" src="https://horizons-cdn.hostinger.com/506afa5e-9879-44fd-ad9f-fe83a7b3f66e/herobg_img-dogOx.jpg" />
+        <img className="w-full h-full object-cover" alt="Eine fürsorgliche Pflegekraft lächelt eine ältere Patientin in einem hellen Raum an" src="/hero_img.jpg" />
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
       
