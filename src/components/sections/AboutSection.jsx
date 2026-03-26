@@ -42,7 +42,7 @@ const AboutSection = () => {
           duration: 0.8,
           delay: 0.2
         }} className="relative group aspect-video">
-            <iframe className="rounded-2xl shadow-2xl w-full h-full object-cover" src="https://www.youtube.com/embed/90tnM0ZXJr8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+            <iframe className="rounded-2xl shadow-2xl w-full h-full object-cover" src="https://www.youtube.com/embed/3JEAvJ8JL1Y?rel=0&modestbranding=1&iv_load_policy=3&controls=1&fs=0&color=white" title="Alexis Care Video" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope" allowFullScreen></iframe>
           </motion.div>
         </div>
       </div>
