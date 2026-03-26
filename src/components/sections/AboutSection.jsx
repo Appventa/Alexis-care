@@ -1,21 +1,28 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { PlayCircle } from 'lucide-react';
 const AboutSection = () => {
-  const iframeRef = useRef(null);
-
   useEffect(() => {
-    const handleMessage = (event) => {
-      if (event.origin !== 'https://www.youtube.com') return;
-      try {
-        const data = JSON.parse(event.data);
-        if (data.event === 'onStateChange' && data.info === 0) {
-          window.location.reload();
+    const initPlayer = () => {
+      new window.YT.Player('yt-player', {
+        videoId: '3JEAvJ8JL1Y',
+        playerVars: { rel: 0, modestbranding: 1, iv_load_policy: 3, fs: 0, color: 'white' },
+        events: {
+          onStateChange: (e) => {
+            if (e.data === window.YT.PlayerState.ENDED) window.location.reload();
+          }
         }
-      } catch {}
+      });
     };
-    window.addEventListener('message', handleMessage);
-    return () => window.removeEventListener('message', handleMessage);
+
+    if (window.YT && window.YT.Player) {
+      initPlayer();
+    } else {
+      const tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      document.head.appendChild(tag);
+      window.onYouTubeIframeAPIReady = initPlayer;
+    }
   }, []);
   return <section id="ueber-uns" className="relative text-white section-padding">
       <div className="absolute inset-0">
@@ -57,7 +64,7 @@ const AboutSection = () => {
           duration: 0.8,
           delay: 0.2
         }} className="relative group aspect-video">
-            <iframe ref={iframeRef} className="rounded-2xl shadow-2xl w-full h-full object-cover" src="https://www.youtube.com/embed/3JEAvJ8JL1Y?rel=0&modestbranding=1&iv_load_policy=3&controls=1&fs=0&color=white&enablejsapi=1" title="Alexis Care Video" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope" allowFullScreen></iframe>
+            <div id="yt-player" className="rounded-2xl shadow-2xl w-full h-full"></div>
           </motion.div>
         </div>
       </div>
