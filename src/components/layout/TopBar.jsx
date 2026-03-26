@@ -7,13 +7,13 @@ const TopBar = () => {
           <img src="/NEW_AC_Header_Logo.png" alt="Alexis Care Logo" className="h-12 w-auto" />
         </div>
         <div className="flex items-center space-x-6 text-sm text-neutral-600 font-body">
-          <a href="tel:017670019952" className="flex items-center space-x-2 hover:text-gold-600 transition-colors">
+          <a href="tel:+4901637858991" className="flex items-center space-x-2 hover:text-gold-600 transition-colors">
             <Phone className="h-4 w-4" />
-            <span>0176-700 19952</span>
+            <span>(+49) 0163 - 7858991</span>
           </a>
-          <a href="mailto:info@alexiscare.de" className="hidden md:flex items-center space-x-2 hover:text-gold-600 transition-colors">
+          <a href="mailto:info@alexis-care.de" className="hidden md:flex items-center space-x-2 hover:text-gold-600 transition-colors">
             <Mail className="h-4 w-4" />
-            <span>info@alexiscare.de</span>
+            <span>info@alexis-care.de</span>
           </a>
           <div className="flex items-center space-x-4">
             <a href="#" className="text-neutral-500 hover:text-blue-600 transition-colors">

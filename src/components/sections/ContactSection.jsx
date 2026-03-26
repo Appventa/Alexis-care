@@ -81,7 +81,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-neutral-900">Telefon</p>
-                    <p className="text-neutral-600">+49 (0) 176-700 19952</p>
+                    <p className="text-neutral-600">(+49) 0163 - 7858991</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -90,7 +90,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-neutral-900">E-Mail</p>
-                    <p className="text-neutral-600">info@alexiscare.de</p>
+                    <p className="text-neutral-600">info@alexis-care.de</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
