@@ -16,7 +16,7 @@ const TopBar = () => {
             <Mail className="h-4 w-4 shrink-0" />
             <span className="hidden md:inline">info@alexis-care.de</span>
           </a>
-          <div className="hidden sm:flex items-center space-x-3">
+          <div className="flex items-center space-x-3">
             <a href="#" className="text-neutral-500 hover:text-blue-600 transition-colors">
               <Facebook className="h-4 w-4" />
             </a>
