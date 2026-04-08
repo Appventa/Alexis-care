@@ -19,9 +19,9 @@ const ContactSection = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const response = await fetch('https://formspree.io/f/mqegkvyw', {
+      const response = await fetch('/contact.php', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
       });
       if (response.ok) {
