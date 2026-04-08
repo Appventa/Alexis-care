@@ -23,9 +23,9 @@ function App() {
 
   const [footerInfo, setFooterInfo] = useState({
     title: "Öffnungszeiten",
-    line1: "Mo-Fr: 8:00 - 17:00 Uhr",
-    line2: "Notfalldienst ausserhalb",
-    line3: "dieser Zeiten möglich"
+    line1: "Mo-Fr: 9:00 - 17:00 Uhr",
+    line2: "Notfallnummer:",
+    line3: "(+49) 0163 - 7858991"
   });
 
   useEffect(() => {

@@ -8,9 +8,9 @@ const TopBar = () => {
           <img src="/NEW_AC_Header_Logo.png" alt="Alexis Care Logo" className="h-12 w-auto hidden md:block" />
         </div>
         <div className="flex items-center space-x-3 md:space-x-6 text-sm text-neutral-600 font-body">
-          <a href="tel:+4901637858991" className="flex items-center space-x-1.5 hover:text-gold-600 transition-colors">
+          <a href="tel:+4922884267409" className="flex items-center space-x-1.5 hover:text-gold-600 transition-colors">
             <Phone className="h-4 w-4 shrink-0" />
-            <span className="text-xs sm:text-sm">(+49) 0163 - 7858991</span>
+            <span className="text-xs sm:text-sm">0228 - 84267409</span>
           </a>
           <a href="mailto:info@alexis-care.de" className="flex items-center space-x-1.5 hover:text-gold-600 transition-colors">
             <Mail className="h-4 w-4 shrink-0" />

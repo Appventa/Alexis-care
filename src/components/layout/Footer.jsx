@@ -2,6 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 
 const legalDocs = {
+  impressum: {
+    title: 'Impressum',
+    sections: [
+      { heading: 'Angaben gemäß § 5 DDG', text: 'Alexis Care GmbH\nFriesdorferstr. 194a, 53175 Bonn\nE-Mail: info@alexis-care.de\nTelefon: +49 228-84267211' },
+      { heading: 'Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV', text: 'Alexty Ama Oforiwaa Ahenkorah' },
+      { heading: 'Register', text: 'Amtsgericht Bonn, HRB 30041\nInstitutionskennzeichen 462 543 761' },
+      { heading: 'Verantwortliche Pflegedienstleitung', text: 'Alexty Ama Oforiwaa Ahenkorah' },
+      { heading: 'Beauftragte für Medizinproduktesicherheit', text: 'Alexty Ama Oforiwaa Ahenkorah' },
+      { heading: 'Vertretungsberechtigter', text: 'Alexty Ama Oforiwaa Ahenkorah' },
+      { heading: 'Berufsrechtliche Regelungen', text: 'Die maßgeblichen berufsrechtlichen Regelungen finden sich unter anderem in:\nOrdnung (veröffentlicht im Bundesgesetzblatt I, Seite 3074, in der Fassung vom 24.09.1998)' },
+      { heading: 'Steuerbefreiung gemäß § 4 Nr. 16 und Nr. 14 UStG', text: '1. § 4 Nr. 16 Satz 1 Buchst. a UStG: Pflegedienstleistungen öffentlicher Einrichtungen\n2. § 4 Nr. 16 Satz 1 Buchst. b–l UStG: Pflegedienstleistungen anerkannter sozialer Einrichtungen i.S.d. Art. 132 Abs. 1 Buchst. g MwStSystRL\n3. § 4 Nr. 14 Buchst. b UStG: Leistungen mit sozialer Zweckbestimmung (Schutz der menschlichen Gesundheit)' },
+      { heading: 'Quellenangaben für verwendete Bilder und Grafiken', text: 'Envato.com' },
+      { heading: 'Umsetzung und Betreuung', text: 'theokokkinidis.pro\nUpventa Holdings LTD' },
+    ]
+  },
   datenschutz: {
     title: 'Datenschutzerklärung',
     sections: [
@@ -130,7 +145,11 @@ const Footer = ({ footerInfo }) => {
             <div>
               <span className="text-lg font-heading font-semibold mb-4 block">Rechtliches</span>
               <ul className="space-y-2 text-neutral-400 font-body">
-                <li><a href="#" className="hover:text-white transition-colors">Impressum</a></li>
+                <li>
+                  <button onClick={() => setActiveModal('impressum')} className="hover:text-white transition-colors text-left">
+                    Impressum
+                  </button>
+                </li>
                 <li>
                   <button onClick={() => setActiveModal('datenschutz')} className="hover:text-white transition-colors text-left">
                     Datenschutz
