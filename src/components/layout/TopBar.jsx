@@ -4,7 +4,8 @@ const TopBar = () => {
   return <div className="bg-transparent border-b border-neutral-200/50">
       <div className="container-max flex justify-between items-center py-2">
         <div className="flex items-center space-x-2">
-          <img src="/NEW_AC_Header_Logo.png" alt="Alexis Care Logo" className="h-10 md:h-12 w-auto" />
+          <img src="/mobile_AC_Logo.png" alt="Alexis Care Logo" className="h-10 w-auto md:hidden" />
+          <img src="/NEW_AC_Header_Logo.png" alt="Alexis Care Logo" className="h-12 w-auto hidden md:block" />
         </div>
         <div className="flex items-center space-x-3 md:space-x-6 text-sm text-neutral-600 font-body">
           <a href="tel:+4901637858991" className="flex items-center space-x-1.5 hover:text-gold-600 transition-colors">
