@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { PlayCircle } from 'lucide-react';
 const AboutSection = () => {
   useEffect(() => {
     const initPlayer = () => {
@@ -64,7 +63,7 @@ const AboutSection = () => {
           duration: 0.8,
           delay: 0.2
         }} className="relative group aspect-video">
-            <div id="yt-player" className="rounded-2xl shadow-2xl w-full h-full"></div>
+            <div id="yt-player" className="rounded-2xl w-full h-full bg-black"></div>
           </motion.div>
         </div>
       </div>
