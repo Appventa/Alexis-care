@@ -20,22 +20,22 @@ const HeroSection = ({ heroContent }) => {
         }} transition={{
           duration: 0.8
         }} className="max-w-3xl space-y-8">
-            <h1 className="text-4xl lg:text-6xl font-bold leading-tight font-heading">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight font-heading">
               {heroContent.line1}<br />
               <span className="text-yellow-400">{heroContent.highlight1}</span>{' '}
               <span className="text-blue-400">{heroContent.highlight2}</span>{' '}
               <span className="text-yellow-400">{heroContent.highlight3}</span>
             </h1>
-            <p className="text-xl text-neutral-200 leading-relaxed font-body">
+            <p className="text-base sm:text-xl text-neutral-200 leading-relaxed font-body">
               Bei Alexis Care steht der Mensch im Mittelpunkt – wir begleiten Sie liebevoll durch den Alltag.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="btn-primary text-lg px-8 py-4" onClick={() => document.getElementById('kontakt').scrollIntoView({
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button className="btn-primary text-sm sm:text-lg px-5 py-2.5 sm:px-8 sm:py-4" onClick={() => document.getElementById('kontakt').scrollIntoView({
               behavior: 'smooth'
             })}>
                 Jetzt unverbindlich beraten lassen
               </Button>
-              <Button variant="outline" className="btn-secondary-hero text-lg px-8 py-4" onClick={() => document.getElementById('leistungen').scrollIntoView({
+              <Button variant="outline" className="btn-secondary-hero text-sm sm:text-lg px-5 py-2.5 sm:px-8 sm:py-4" onClick={() => document.getElementById('leistungen').scrollIntoView({
               behavior: 'smooth'
             })}>
                 Mehr erfahren
