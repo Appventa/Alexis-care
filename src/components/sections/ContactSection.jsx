@@ -146,7 +146,7 @@ const ContactSection = () => {
                 </label>
                 <textarea id="message" name="message" value={formData.message} onChange={handleInputChange} required rows={4} className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-gold-500 focus:border-transparent transition-all resize-none bg-white/50" placeholder="Beschreiben Sie Ihre Situation und Ihre Bedürfnisse..." />
               </div>
-              <Button type="submit" className="w-full btn-primary text-lg py-4">
+              <Button type="submit" className="w-full btn-primary text-sm md:text-lg py-3 md:py-4">
                 <Send className="h-5 w-5 mr-2" />
                 Beratungsanfrage senden
               </Button>
