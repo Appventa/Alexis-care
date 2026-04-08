@@ -121,7 +121,7 @@ const ContactSection = () => {
         }} transition={{
           duration: 0.6
         }} className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl card-shadow-lg">
-            <form onSubmit={handleSubmit} className="space-y-6 font-body">
+            <form id="kontakt-formular" onSubmit={handleSubmit} className="space-y-6 font-body">
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold text-neutral-900 mb-2">
                   Name *

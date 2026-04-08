@@ -12,7 +12,7 @@ const Navigation = () => {
             <a href="#ablauf" className="hover:text-gold-600 transition-colors">Ablauf</a>
             <a href="#faq" className="hover:text-gold-600 transition-colors">FAQ</a>
           </div>
-          <Button onClick={() => document.getElementById('kontakt').scrollIntoView({ behavior: 'smooth' })} className="btn-primary ml-auto text-sm py-2 px-4 md:text-base md:py-3 md:px-6">
+          <Button onClick={() => document.getElementById('kontakt-formular').scrollIntoView({ behavior: 'smooth' })} className="btn-primary ml-auto text-sm py-2 px-4 md:text-base md:py-3 md:px-6">
             Beratung anfragen
           </Button>
         </div>
