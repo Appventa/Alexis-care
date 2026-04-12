@@ -24,8 +24,15 @@ const AboutSection = () => {
     }
   }, []);
   return <section id="ueber-uns" className="relative text-white section-padding">
-      <div className="absolute inset-0 bg-neutral-900">
-        <img className="w-full h-full object-cover opacity-50" alt="Alexis Care Fahrzeug" src="/IMG-20260220-WA0004.jpg" />
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: 'url(/IMG-20260220-WA0004.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-neutral-900/50" />
       </div>
       
       <div className="relative z-10 container-max">
