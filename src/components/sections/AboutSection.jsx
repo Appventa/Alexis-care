@@ -24,9 +24,8 @@ const AboutSection = () => {
     }
   }, []);
   return <section id="ueber-uns" className="relative text-white section-padding">
-      <div className="absolute inset-0">
-        <img className="w-full h-full object-cover" alt="Hintergrundbild einer freundlichen Pflegesituation" src="https://horizons-cdn.hostinger.com/506afa5e-9879-44fd-ad9f-fe83a7b3f66e/alexis_businesslook_03-0L1t0.png" />
-        <div className="absolute inset-0 bg-neutral-900/70"></div>
+      <div className="absolute inset-0 bg-neutral-900">
+        <img className="w-full h-full object-cover opacity-50" alt="Alexis Care Fahrzeug" src="/IMG-20260220-WA0004.jpg" />
       </div>
       
       <div className="relative z-10 container-max">
